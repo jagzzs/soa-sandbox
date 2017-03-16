@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace SoaSandbox.Contract
@@ -12,9 +13,11 @@ namespace SoaSandbox.Contract
     public interface IAuthenticationService
     {
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "SignIn", BodyStyle = WebMessageBodyStyle.WrappedRequest, RequestFormat = WebMessageFormat.Json | WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Json | WebMessageFormat.Xml)]
         bool SignIn(User user);
 
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "SignUp", BodyStyle = WebMessageBodyStyle.WrappedRequest, RequestFormat = WebMessageFormat.Json | WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Json | WebMessageFormat.Xml)]
         bool SignUp(User user);
     }
 }
