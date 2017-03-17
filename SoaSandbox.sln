@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaSandbox.Service", "SoaSa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaSandbox.Data", "SoaSandbox.Data\SoaSandbox.Data.csproj", "{F223FF71-223A-4B28-A215-B1595711AB57}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{63FDA597-9607-4106-9165-A9DCAAB8630E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaSandbox.Data.Test", "SoaSandbox.Data.Test\SoaSandbox.Data.Test.csproj", "{B31A5F83-2330-40A3-8C9B-34B489921C2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +37,15 @@ Global
 		{F223FF71-223A-4B28-A215-B1595711AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F223FF71-223A-4B28-A215-B1595711AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F223FF71-223A-4B28-A215-B1595711AB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31A5F83-2330-40A3-8C9B-34B489921C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31A5F83-2330-40A3-8C9B-34B489921C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31A5F83-2330-40A3-8C9B-34B489921C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31A5F83-2330-40A3-8C9B-34B489921C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B31A5F83-2330-40A3-8C9B-34B489921C2D} = {63FDA597-9607-4106-9165-A9DCAAB8630E}
 	EndGlobalSection
 EndGlobal
