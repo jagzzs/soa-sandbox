@@ -46,8 +46,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -60,17 +67,23 @@
   <ItemGroup>
     <Compile Include="AuthenticationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoaSandbox.Contract\SoaSandbox.Contract.csproj">
       <Project>{7b476467-84c8-4b7c-960b-7282a59270f5}</Project>
       <Name>SoaSandbox.Contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SoaSandbox.Data\SoaSandbox.Data.csproj">
+      <Project>{f223ff71-223a-4b28-a215-b1595711ab57}</Project>
+      <Name>SoaSandbox.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,9 +42,12 @@ namespace SoaSandbox.Data
             }
         }
 
-        private String GetConnectionString(String path)
+        private String GetConnectionString(String fileName)
         {
-            return File.ReadAllText(path).Trim();
+            var path = AppDomain.CurrentDomain.RelativeSearchPath;
+            var fileText = File.ReadAllText(path + "\\" + fileName).Trim();
+            var decoded = WebUtility.HtmlDecode(fileText);
+            return decoded;
         }
     }
 }

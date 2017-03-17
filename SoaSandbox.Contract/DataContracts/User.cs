@@ -10,6 +10,18 @@ namespace SoaSandbox.Contract.DataContracts
     [DataContract]
     public class User
     {
+        public User()
+        {
+            this.Id = Guid.NewGuid();
+        }
+
+        public User(String name, String password)
+        {
+            this.Id = Guid.NewGuid();
+            this.Name = name;
+            this.Password = password;
+        }
+
         [DataMember]
         public Guid Id { get; set; }
     
